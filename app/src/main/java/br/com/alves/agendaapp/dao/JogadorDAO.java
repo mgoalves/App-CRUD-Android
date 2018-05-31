@@ -80,4 +80,16 @@ public class JogadorDAO extends SQLiteOpenHelper {
         cursor.close();
         return listaRetorno;
     }
+
+    public void excluirJogador(Integer id) {
+
+        //Criar tabela
+        StringBuilder sql = new StringBuilder();
+        sql.append("DELETE FROM Jogadores ");
+        sql.append("WHERE NUMG_Id = ");
+        sql.append(id);
+
+        SQLiteDatabase db = getReadableDatabase();
+        db.execSQL(sql.toString());
+    }
 }
