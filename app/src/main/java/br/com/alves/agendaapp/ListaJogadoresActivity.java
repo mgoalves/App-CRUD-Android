@@ -82,4 +82,3 @@ public class ListaJogadoresActivity extends AppCompatActivity {
         });
     }
 }
-
